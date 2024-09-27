@@ -12,12 +12,15 @@ TOTAL_MEMORY_GB = 128  # Total memory available in gigabytes
 
 # User input for required resources
 try:
-    required_cpu_cores = int(input("Enter the number of required CPU cores (integer): "))
+    required_cpu_cores = int(input("Enter the number of required CPU cores (must be a multiple of 2): "))
     required_memory_gb = float(input("Enter the amount of required memory in GB (float): "))
 
     # Input validation for negative values
     if required_cpu_cores < 0 or required_memory_gb < 0:
         print("Error: Resource requests cannot be negative.")
+    # Check if required_cpu_cores is a multiple of 2
+    elif required_cpu_cores % 2 != 0:
+        print("Error: The number of CPU cores must be a multiple of 2.")
     else:
         # Check resource availability
         if (required_cpu_cores <= TOTAL_CPU_CORES) and (required_memory_gb <= TOTAL_MEMORY_GB):
