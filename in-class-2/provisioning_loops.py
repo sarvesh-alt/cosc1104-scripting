@@ -8,7 +8,7 @@
 
 # Constants
 TOTAL_CPU_CORES = 32  # Total number of CPU cores available
-TOTAL_MEMORY_GB = 128  # Total amount of memory available in gigabytes (GB)
+TOTAL_MEMORY_GB = 64  # Total amount of memory available in gigabytes (GB)
 
 # Lists to track resources
 allocated_resources = []  # List to store allocated resources
