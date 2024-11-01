@@ -113,13 +113,13 @@ def show_menu():
     """Display the main menu and handle user selections."""
     while True:
         print("\nCloud Storage Tracking System")
-        print("1. Create User Account")
-        print("2. Delete User Account")
+        print("1. Create a New Account")
+        print("2. Delete an Account")
         print("3. Upload File")
-        print("4. Display All Accounts")
+        print("4. List All Accounts")
         print("5. Exit")
         
-        choice = input("Choose an option (1-5): ").strip()
+        choice = input("Select an option (1-5): ").strip()
         
         if choice == "1":
             create_user_account()
